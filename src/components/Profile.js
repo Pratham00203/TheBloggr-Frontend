@@ -76,7 +76,7 @@ export default function Profile() {
       };
       // await axios.put(`/users/unfollow/${profileDetails.userDetails.userid}`);
       fetch(
-        `http://localhost:5000/users/unfollow/${profileDetails.userDetails.userid}`,
+        `https://thebloggr-backend.herokuapp.com/users/unfollow/${profileDetails.userDetails.userid}`,
         config
       ).then((res) => res.json());
     } catch (err) {
@@ -95,7 +95,7 @@ export default function Profile() {
         method: "POST",
       };
       fetch(
-        `http://localhost:5000/users/follow/${profileDetails.userDetails.userid}`,
+        `https://thebloggr-backend.herokuapp.com/users/follow/${profileDetails.userDetails.userid}`,
         config
       )
         .then((res) => res.json())

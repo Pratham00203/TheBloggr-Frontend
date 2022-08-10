@@ -148,7 +148,7 @@ export default function Blog() {
         },
         method: "PUT",
       };
-      fetch(`http://localhost:5000/blogs/${blogid}/like`, config)
+      fetch(`https://thebloggr-backend.herokuapp.com/blogs/${blogid}/like`, config)
         .then((res) => res.json())
         .then((res) => setLikes(res.likes));
       // const res = await axios.put(`/blogs/${blogid}/like`, config);
@@ -168,7 +168,7 @@ export default function Blog() {
         method: "DELETE",
       };
 
-      fetch(`http://localhost:5000/blogs/${blogid}/unlike`, config)
+      fetch(`https://thebloggr-backend.herokuapp.com/blogs/${blogid}/unlike`, config)
         .then((res) => res.json())
         .then((res) => setLikes(res.likes));
       // const res = await axios.delete(`/blogs/${blogid}/unlike`, config);
@@ -199,7 +199,7 @@ export default function Blog() {
         method: "POST",
       };
       fetch(
-        `http://localhost:5000/users/unfollow/${blogDetails.userid}`,
+        `https://thebloggr-backend.herokuapp.com/users/unfollow/${blogDetails.userid}`,
         config
       ).then((res) => res.json());
     } catch (err) {
@@ -216,7 +216,7 @@ export default function Blog() {
         },
         method: "POST",
       };
-      fetch(`http://localhost:5000/users/follow/${blogDetails.userid}`, config)
+      fetch(`https://thebloggr-backend.herokuapp.com/users/follow/${blogDetails.userid}`, config)
         .then((res) => res.json())
         .then((res) => {
           if (res === "You can't Follow yourself")

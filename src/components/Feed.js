@@ -30,7 +30,7 @@ export default function Feed({ type }) {
         },
         method: "GET",
       };
-      fetch("http://localhost:5000/blogs/me/my-feed", config)
+      fetch("https://thebloggr-backend.herokuapp.com/blogs/me/my-feed", config)
         .then((res) => res.json())
         .then((res) => {
           setLoaded(true);
@@ -51,7 +51,7 @@ export default function Feed({ type }) {
         method: "GET",
       };
       if (query === "all") {
-        fetch("http://localhost:5000/blogs", config)
+        fetch("https://thebloggr-backend.herokuapp.com/blogs", config)
           .then((res) => res.json())
           .then((res) => {
             setLoaded(true);
@@ -61,7 +61,7 @@ export default function Feed({ type }) {
         // setLoaded(true);
         // setFeedBlogs(res.data.blogs);
       } else {
-        fetch(`http://localhost:5000/blogs/search/${query}`, config)
+        fetch(`https://thebloggr-backend.herokuapp.com/blogs/search/${query}`, config)
           .then((res) => res.json())
           .then((res) => {
             setLoaded(true);

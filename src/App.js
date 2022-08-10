@@ -21,7 +21,7 @@ import { ToastProvider } from "react-toast-notifications";
 
 axios.defaults.headers.common["Authorization"] = localStorage.getItem("token");
 // axios.defaults.baseURL = "http://192.168.0.153:5000";
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://thebloggr-backend.herokuapp.com";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
